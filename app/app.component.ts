@@ -1,7 +1,22 @@
 import {Component} from '@angular/core';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import { GironiComponent } from './component/gironi.component';
 
 @Component({
-    selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    selector: 'applicazione',
+    templateUrl: 'app/view/home.html',
+    directives : [ROUTER_DIRECTIVES], //GironiComponent
+    providers : [ROUTER_PROVIDERS]
 })
-export class AppComponent { }
+
+@RouteConfig([
+	{
+		path : '/gironi',
+		name : 'Gironi',
+		component : GironiComponent
+	}
+])
+
+export class AppComponent {
+	public benvenuto : string = "Benvenuto";
+}
