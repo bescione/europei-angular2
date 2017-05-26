@@ -1,3 +1,3 @@
 # Angular 2: pacchetto di avvio
 
-Questo pacchetto, ripreso da quello di Angular Quickstart, dà il via al nostro progetto in Angular
+Materiali relativi a due lezioni di un corso Angular per Onyx Technology. Il primo video della lezione è qui: https://youtu.be/8yQ07QEGfN4
