@@ -19,7 +19,7 @@ export class GironiService {
 
 		let headers = new Headers;
 		headers.append('Content-type', 'application/json');
-		return this._http.post('project-8138444920201144382.firebaseio.com/partita.json', body, headers)
-		.map(res => res.json());
+		return this._http.post('---/partita.json', body, headers)
+		.map(res => res.json()); // al posto di --- mettere indicazione per Firebase
 	}
 }
