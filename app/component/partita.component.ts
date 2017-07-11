@@ -7,7 +7,7 @@ import { GironiService } from '../service/gironi.service';
 	template : `
 			Squadre : <input type="text" #team>
 			<br> Risultato: <input type="text" #risultato>
-			<button type="button" class="btn btn-default" (click)="onInvia(team.value, risultato.value">Invia</button>
+			<button type="button" class="btn btn-default" (click)="onSending(team.value, risultato.value">Invia</button>
 				`
 })
 
@@ -16,7 +16,7 @@ export class PartitaComponent {
 
 	constructor(private _http : GironiService) {}
 
-	onInvia(team:string, risultato:string) {
+	onSending(team:string, risultato:string) {
 		this._http.postGironi(team : team, risultato : risultato)
 			.subscribe(
 				response => this.response = response,
